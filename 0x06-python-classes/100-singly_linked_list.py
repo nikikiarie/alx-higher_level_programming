@@ -55,7 +55,7 @@ class SinglyLinkedList:
             nnode.next_node = None
             self.__head = nnode
         elif self.__head.data > value:
-            nnode.next_value - self.__head
+            nnode.next_value = self.__head
             self.__head = nnode
         else:
             tv = self.__head
