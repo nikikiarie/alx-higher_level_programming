@@ -1,8 +1,8 @@
 #!/usr/bin/node
 
 
-const { li } = require('./100-data');
+const { list} = require('./100-data');
 
 
-console.log(li);
-console.log(li.map((element, index) => element * index));
+console.log(list);
+console.log(list.map((element, index) => element * index));
