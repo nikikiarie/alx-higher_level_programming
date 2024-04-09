@@ -1,8 +1,12 @@
 #!/usr/bin/node
 
-const fs = require('fs');
+const fs = require('fs').promises;
+const { argv } = require('process');
 
+fs.readFile(argv[2], 'utf8')
+	.then(res => fs.writeFile(argv[4], res, 'utf8'))
+	.catch(err => console.error(err));
 
-const oneArg = fs.readFileSync(process.argv[2]).toString();
-const twoArg = fs.readFileSync(process.argv[3]).toString();
-fs.writeFileSync(process.argv[4], oneArg + twoArg);
+fs.readFile(argv[3], 'utf8')
+        .then(res => fs.writeFile(argv[4], res, { flag: 'a' }, 'utf8'))
+        .catch(err => console.error(err));
