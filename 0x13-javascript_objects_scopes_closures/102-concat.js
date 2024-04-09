@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const fs =require('fs');
+const fs = require('fs');
 
 
 const oneArg = fs.readFileSync(process.argv[2]).toString();
