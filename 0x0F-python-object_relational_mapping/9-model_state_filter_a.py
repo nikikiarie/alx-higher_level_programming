@@ -7,10 +7,11 @@ from sqlalchemy import (create_engine)
 
 
 if __name__ == "__main__":
-    engine = create_engine('mysql+mysql://{}:{}@localhost:3306/{}'.format(argv[1], argv[2], argv[3]))
+    engine = create_engine('mysql+mysql://{}:{}@localhost:3306/{}'.format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for i in session.query(State).filter(State.name.like('%a%')):
-        print(i.id, i.name, sep=": ")
+    st = session.query(State).filter(State.name.like('%a%')).order_by(State.id)
+    for i in st:
+        print(f'{i.id}: {i.name}')
     session.close()
