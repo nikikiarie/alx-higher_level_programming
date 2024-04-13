@@ -19,7 +19,7 @@ if __name__ == '__main__':
 
     st = session.query(State).order_by(State.id)
 
-    for i in states:
+    for i in st:
         print(f'{row.id}:{row.name}')
     session.close()
 
