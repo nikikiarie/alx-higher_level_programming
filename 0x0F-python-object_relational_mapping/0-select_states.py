@@ -3,7 +3,7 @@
 
 
 import sys
-import MySQLdb
+import MySQLdb as mysql
 
 
 if __name__ == '__main__':
