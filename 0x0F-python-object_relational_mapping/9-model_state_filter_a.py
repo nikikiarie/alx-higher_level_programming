@@ -7,9 +7,9 @@ from sqlalchemy import (create_engine)
 
 
 if __name__ == "__main__":
-    eng = create_engine('mysql+mysql://{}:{}@localhost:3306/{}'.format(argv[1], argv[2], argv[3]))
-    Base.metadata.create_all(eng)
-    Session = sessionmaker(bind=eng)
+    engine = create_engine('mysql+mysql://{}:{}@localhost:3306/{}'.format(argv[1], argv[2], argv[3]))
+    Base.metadata.create_all(engine)
+    Session = sessionmaker(bind=engine)
     session = Session()
     for i in session.query(State).filter(State.name.like('%a%')):
         print(i.id, i.name, sep=": ")
