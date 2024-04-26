@@ -10,4 +10,3 @@ if __name__ == "__main__":
         print("\t- type: {}".format(type(cnt)))
         print("\t- content: {}".format(cnt))
         print("\t- utf8 content: {}".format(cnt.decode('utf-8')))
-
