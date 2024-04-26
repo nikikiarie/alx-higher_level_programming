@@ -9,6 +9,7 @@ from sys import argv
 
 
 if __name__ == '__main__':
-    rsp = post(argv[1], data={'email': argv[2]})
+    rsp = post(argv[1], data={
+        'email': argv[2]})
     print(rsp.text)
 
