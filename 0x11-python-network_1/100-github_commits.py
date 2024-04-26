@@ -7,7 +7,8 @@ from sys import argv
 
 
 if __name__ == '__main__':
-    addr = "https://api.github.com/repos/{}/{}/commits".format(argv[2], argv[1])
+    addr = "https://api.github.com/repos/{}/{}/commits".format(
+            argv[2], argv[1])
 
     rsp = get(addr)
     obj = rsp.json()
