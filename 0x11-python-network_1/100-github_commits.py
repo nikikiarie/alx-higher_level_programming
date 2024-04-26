@@ -13,6 +13,8 @@ if __name__ == '__main__':
     obj = rsp.json()
     try:
         for a in range(10):
-            print("{}: {}".format(obj[a].get("sha"), obj[a].get("commit").get("author").get("name")))
+            print("{}: {}".format(
+                obj[a].get("sha"),
+                obj[a].get("commit").get("author").get("name")))
     except IndexError:
         pass
