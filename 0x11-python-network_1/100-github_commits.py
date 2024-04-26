@@ -7,9 +7,9 @@ from sys import argv
 
 
 if __name == 'main':
-    add = "https://api.github.com/repos/{}/{}/commits".format(argv[2], argv[1])
+    addr = "https://api.github.com/repos/{}/{}/commits".format(argv[2], argv[1])
 
-    rsp = get(url)
+    rsp = get(addr)
     obj = rsp.json()
     try:
         for a in range(10):
