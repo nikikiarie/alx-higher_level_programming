@@ -6,7 +6,7 @@ from requests import get
 from sys import argv
 
 
-if __name == 'main':
+if __name == '__main__':
     addr = "https://api.github.com/repos/{}/{}/commits".format(argv[2], argv[1])
 
     rsp = get(addr)
