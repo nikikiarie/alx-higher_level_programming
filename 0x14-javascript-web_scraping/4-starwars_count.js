@@ -2,7 +2,7 @@
 
 const req = require('request');
 
-req(process.arg[2], function (err, res, data) {
+req(process.argv[2], function (err, res, data) {
   if (!err) {
     const info = JSON.parse(data).results;
     console.log(info.reduce((count, movie) => {
