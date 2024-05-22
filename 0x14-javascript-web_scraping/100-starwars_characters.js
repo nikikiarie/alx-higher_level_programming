@@ -1,6 +1,7 @@
 #!/usr/bin/node
 
 const req = require('request');
+const id = process.argv[2];
 const rest_url = `https://swapi-api.alx-tools.com/api/films/${id}`;
 
 req.get(rest_url, (err, res, data) => {
