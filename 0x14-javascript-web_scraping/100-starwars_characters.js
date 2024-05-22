@@ -10,7 +10,7 @@ req.get(rest_url, (err, res, data) => {
 	} else {
 		const info = JSON.parse(data);
 		const characters = info.characters;
-		for (const ch in characters) {
+		for (const ch of characters) {
 			req.get(ch, (err, res, data) => {
 				if (err) {
 					console.log(err);
