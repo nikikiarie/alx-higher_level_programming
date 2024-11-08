@@ -3,6 +3,7 @@
 Solves the N-Queen puzzle using backtracking.
 """
 
+
 def is_safe(queens, n):
     """ Check if queens can coexist without attacking. """
     for i in range(n):
